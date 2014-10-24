@@ -1,0 +1,72 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+$(document).ready(function() {
+  $("#form1").submit(function() {
+    $("table").remove();  //This removes the table when another one is generated
+      var RowStart = Number(document.getElementById('StartH').value);
+      var RowEnd = Number(document.getElementById('EndH').value);
+      var ColumnStart = Number(document.getElementById('StartV').value);
+      var ColumnEnd = Number(document.getElementById('EndV').value);
+      
+      var n1= document.querySelector("#StartH");
+      var n2= document.querySelector("#EndH");
+      var n3= document.querySelector("#StartV");
+      var n4= document.querySelector("#EndV");
+        str = "";
+        // For the following three if statements generally do that same thing.
+        // They all checks if the user inputed incorrect data.  If so, the
+        // Text boxes that are incorrect turn red and an error message appears. 
+        if(RowStart > RowEnd && ColumnStart > ColumnEnd){
+          $("h2").remove();
+          n1.style.backgroundColor="Red";
+          n2.style.backgroundColor="Red";
+          n3.style.backgroundColor="Red";
+          n4.style.backgroundColor="Red";
+          str +="<h2 style=\"color:red\"> Both your starting values are greater than both your ending values.<br>Please recalculate and try again. </h2>";
+          $(this).append(str);
+          return;
+        }
+        else if(RowStart > RowEnd){
+          $("h2").remove(); //removes the previous error message if there is one
+          n1.style.backgroundColor="Red";
+          n2.style.backgroundColor="Red";
+          str +="<h2 style=\"color:red\"> Your starting horizontal value is greater than your ending horizontal value.<br>Please recalculate and try again. </h2>";
+          $(this).append(str);//append all the strings in the str variable. 
+          return;
+        }
+        
+        else if(ColumnStart > ColumnEnd){
+          $("h2").remove();//removes the previous error message if there is one
+          n3.style.backgroundColor="Red";
+          n4.style.backgroundColor="Red";
+          str +="<h2 style=\"color:red\"> Your starting column value is greater than your ending column value.<br>Please recalculate and try again. </h2>";
+          $(this).append(str);//append all the strings in the str variable. 
+          return;
+        }
+        
+        str += "<table border=2 width=100%>";
+        str += "<tr><td> Q </td>";
+        // A for loop to generate the first row in the table
+        for(i=RowStart; i<= RowEnd; i++){
+          str+="<th>" + i + "</th>";
+        } // End of for loop 
+            
+        str+= "</tr>";
+        // A for loop to genearte the first numbers in the columns, along with
+        // multiplying the numbers in the middle of the table.
+        for(i=ColumnStart; i<=ColumnEnd; i++){
+          str+="<tr><td>" + i + "</td>";
+          for(j=RowStart; j<=RowEnd; j++){
+            str+= "<td>" + i*j + "</td>";
+          }// End of nested for loop
+        }// End of for loop 
+        str += "</tr>";
+        str += "</table>";
+        
+        $(this).append(str); //append all the strings in the str variable. 
+        return;
+    });
+});
