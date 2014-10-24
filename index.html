@@ -1,83 +1,39 @@
 <!DOCTYPE html>
+<!--
+- Assignment 6: Creating an Interactive Dynamic Table
+  - Joshua Blanchette, UMass Lowell Computer Science Transfer Student
+  - Email:  Joshua_Blanchette@student.uml.edu
+  - Date: 10/22/2014
+  - This page creates a dynamic multiplication table based on the information
+  - given by the user.  My JavaScript and CSS is being imported from a different
+  - file. 
+-->
 <html>
-
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Assignment6 : ">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Assignment6</title>
+    <title>Assignment 6!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import jquery library -->
+    <script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+    <!-- Below allows my JS to interact with my page -->
+    <script src="A6Jscript.js"></script>
+    <!--Below are links to customize my fonts using Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Changa+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
+    <!-- Below allows my CSS to interact with my page -->
+    <link type="text/css" rel="stylesheet" href="CSS6.css" />
   </head>
-
   <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/JoshB53/Assignment6">View on GitHub</a>
-
-          <h1 id="project_title">Assignment6</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/JoshB53/Assignment6/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/JoshB53/Assignment6/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>&lt;!DOCTYPE html&gt;</p>
-
-
-
-<p>
-  </p>
-    Assignment 6!
-    
-    
-    &lt;!-- Import jquery library --&gt;
-    
-    &lt;!-- Below allows my JS to interact with my page --&gt;
-    
-    &lt;!--Below are links to customize my fonts using Google fonts --&gt;
-    
-    
-    
-    &lt;!-- Below allows my CSS to interact with my page --&gt;
-    
-  
-  
-    <h1>
-<a name="-dynamic-multiplication-table" class="anchor" href="#-dynamic-multiplication-table"><span class="octicon octicon-link"></span></a> Dynamic Multiplication Table</h1>
-    <h2>
-<a name="-please-fill-out-the-following-" class="anchor" href="#-please-fill-out-the-following-"><span class="octicon octicon-link"></span></a> Please fill out the following </h2>
-      &lt;!-- This form tag creates four input boxes, allowing for user input --&gt;
-      
-        Starting horizontal multiplier: <br>
-        Ending horizontal multiplier:   <br>
-        Starting vertical multiplier: <br>
-        Ending vertical multiplier:   <br>
-        
-      
-  
-
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Assignment6 maintained by <a href="https://github.com/JoshB53">JoshB53</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
+    <h1> Dynamic Multiplication Table</h1>
+    <h2> Please fill out the following </h2>
+      <!-- This form tag creates four input boxes, allowing for user input -->
+      <form id="form1" action="javascript:void(0)">
+        Starting horizontal multiplier: <input type="number" name="StartH" id="StartH"><br>
+        Ending horizontal multiplier:   <input type="number" name="EndH" id="EndH"><br>
+        Starting vertical multiplier: <input type="number" name="StartV" id="StartV"><br>
+        Ending vertical multiplier:   <input type="number" name="EndV" id="EndV"><br>
+        <input type="submit" value="Submit Answer">
+      </form>
   </body>
 </html>
