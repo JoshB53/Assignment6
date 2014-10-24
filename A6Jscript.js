@@ -47,6 +47,7 @@ $(document).ready(function() {
           return;
         }
         
+        $("h2").remove();
         str += "<table border=2 width=100%>";
         str += "<tr><td> Q </td>";
         // A for loop to generate the first row in the table
