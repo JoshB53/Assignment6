@@ -1,8 +1,12 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/*
+- Assignment 6: Creating an Interactive Dynamic Table
+  - Joshua Blanchette, UMass Lowell Computer Science Transfer Student
+  - Email:  Joshua_Blanchette@student.uml.edu
+  - Date: 10/22/2014
+  - This file is my JavaScript that actually creates the table, and checks for user
+  - error.  It takes the given information from the user and multiplies the numbers
+  - accordingly.  
+*/
 $(document).ready(function() {
   $("#form1").submit(function() {
     $("table").remove();  //This removes the table when another one is generated
