@@ -1,0 +1,48 @@
+/*Im assuming that using the html tag to customize all of my page
+  is not a good idea, but I thought it was suitable for this project.
+  This code adds a nice, subtle background color, and specifies a certain
+  width for my webpage and when to break into a new line.*/
+html{
+    background-color: #FFBF7E;
+    width: 75em;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3em;
+    text-decoration: none;
+    border-bottom: 5px solid #154BB2;
+    color: #154BB2;
+}
+h2{
+    font-family: 'Changa One', cursive; 
+    font-size: 2em;
+    color: #154BB2;    
+}
+table tr:first-child {
+    background: lightblue;
+}
+table tr td:first-child{
+    background: lightblue;
+}
+
+#form1{
+    font-family: 'Open Sans', sans-serif;
+    color: #154BB2;
+}
+
+table{
+    border: 3px solid black;
+}
+
+#EndH{
+    margin-left: 12px;
+}
+#StartV{
+    margin-left: 23px
+}
+#EndV{
+    margin-left:33px;
+}
