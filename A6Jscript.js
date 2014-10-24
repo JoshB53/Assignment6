@@ -6,7 +6,7 @@
 $(document).ready(function() {
   $("#form1").submit(function() {
     $("table").remove();  //This removes the table when another one is generated
-    
+    $("h2").remove(); // Removes previous error messages
       //Below are declerations of multiple variables.
       var RowStart = Number(document.getElementById('StartH').value);
       var RowEnd = Number(document.getElementById('EndH').value);
