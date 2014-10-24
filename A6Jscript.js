@@ -6,6 +6,8 @@
 $(document).ready(function() {
   $("#form1").submit(function() {
     $("table").remove();  //This removes the table when another one is generated
+    
+      //Below are declerations of multiple variables.
       var RowStart = Number(document.getElementById('StartH').value);
       var RowEnd = Number(document.getElementById('EndH').value);
       var ColumnStart = Number(document.getElementById('StartV').value);
@@ -15,7 +17,12 @@ $(document).ready(function() {
       var n2= document.querySelector("#EndH");
       var n3= document.querySelector("#StartV");
       var n4= document.querySelector("#EndV");
-        str = "";
+      str = "";
+      //Below sets the background color of my text boxes to white
+      n1.style.backgroundColor="White";
+      n2.style.backgroundColor="White";
+      n3.style.backgroundColor="White";
+      n4.style.backgroundColor="White";
         // For the following three if statements generally do that same thing.
         // They all checks if the user inputed incorrect data.  If so, the
         // Text boxes that are incorrect turn red and an error message appears. 
