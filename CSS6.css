@@ -18,7 +18,8 @@ html{
     word-wrap: break-word;
     text-align: center;
 }
-
+/* These rules change the font type, size and decorating of the text
+   in h1.  It also adds a solid line border underneath h1 and changes the color*/
 h1{
     font-family: 'Luckiest Guy', cursive;
     font-size: 3em;
@@ -26,27 +27,33 @@ h1{
     border-bottom: 5px solid #154BB2;
     color: #154BB2;
 }
+/* Theese rules change the font typem size and color of my h2. */
 h2{
     font-family: 'Changa One', cursive; 
     font-size: 2em;
     color: #154BB2;    
 }
+/* These next two rules change the background color of the first
+   boxes in the column/row section.  This allows the user to easily
+   understand which numbers are not being multipled*/
 table tr:first-child {
     background: lightblue;
 }
 table tr td:first-child{
     background: lightblue;
 }
-
+/* Changes the font and color of the text in the form1 tag */
 #form1{
     font-family: 'Open Sans', sans-serif;
     color: #154BB2;
 }
-
+/* This rule makes the border of my table a thichker, black line */
 table{
     border: 3px solid black;
 }
 
+/* These last three rules adjust the positioning of the numbers
+  inside my table.*/
 #EndH{
     margin-left: 12px;
 }
