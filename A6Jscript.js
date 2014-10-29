@@ -28,8 +28,8 @@ $(document).ready(function() {
       n3.style.backgroundColor="White";
       n4.style.backgroundColor="White";
         // For the following three if statements generally do that same thing.
-        // They all checks if the user inputed incorrect data.  If so, the
-        // Text boxes that are incorrect turn red and an error message appears. 
+        // They all check if the user inputed incorrect data.  If so, the
+        // text boxes that are incorrect turn red and an error message appears. 
         if(RowStart > RowEnd && ColumnStart > ColumnEnd){
           $("h2").remove();
           n1.style.backgroundColor="Red";
@@ -37,7 +37,7 @@ $(document).ready(function() {
           n3.style.backgroundColor="Red";
           n4.style.backgroundColor="Red";
           str +="<h2 style=\"color:red\"> Both your starting values are greater than both your ending values.<br>Please recalculate and try again. </h2>";
-          $(this).append(str);
+          $(this).append(str);//append all the strings in the str variable. 
           return;
         }
         else if(RowStart > RowEnd){
@@ -59,8 +59,8 @@ $(document).ready(function() {
         }
         
         $("h2").remove();
-        str += "<table border=2 width=100%>";
-        str += "<tr><td> Q </td>";
+        str += "<table border=2 width=100%>"; 
+        str += "<tr><td> Q </td>";  // This Q appears in the top right block that is not used
         // A for loop to generate the first row in the table
         for(i=RowStart; i<= RowEnd; i++){
           str+="<th>" + i + "</th>";
@@ -75,8 +75,8 @@ $(document).ready(function() {
             str+= "<td>" + i*j + "</td>";
           }// End of nested for loop
         }// End of for loop 
-        str += "</tr>";
-        str += "</table>";
+        str += "</tr>"; //close tag
+        str += "</table>"; //close tag
         
         $(this).append(str); //append all the strings in the str variable. 
         return;
